@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>LoginHandler</servlet-name>
+        <servlet-class>control.LoginHandler</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserAdminHandler</servlet-name>
+        <servlet-class>control.UserAdminHandler</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>WriteMailHandler</servlet-name>
+        <servlet-class>control.WriteMailHandler</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReadMailHandler</servlet-name>
+        <servlet-class>control.ReadMailHandler</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginHandler</servlet-name>
+        <url-pattern>/Login.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserAdminHandler</servlet-name>
+        <url-pattern>/UserAdmin.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WriteMailHandler</servlet-name>
+        <url-pattern>/WriteMail.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReadMailHandler</servlet-name>
+        <url-pattern>/ReadMail.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
